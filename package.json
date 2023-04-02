@@ -1,6 +1,6 @@
 {
   "name": "turbowarp-packager-cli",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "This project is a CLI wrapper for the @turbowarp/packager package. It allows you to easily package your Scratch 3.0 projects using the @turbowarp/packager package without having to write any code. Can be used in CI/CD pipelines.",
   "main": "index.js",
   "bin": {
