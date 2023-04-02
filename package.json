@@ -1,0 +1,33 @@
+{
+  "name": "turbowarp-packager-cli",
+  "version": "1.6.1",
+  "description": "This project is a CLI wrapper for the @turbowarp/packager package. It allows you to easily package your Scratch 3.0 projects using the @turbowarp/packager package without having to write any code. Can be used in CI/CD pipelines.",
+  "main": "index.js",
+  "bin": {
+    "turbowarp-packager-cli": "index.js"
+  },
+  "files": [
+    "index.js",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "turbowarp-packager-settings.json",
+    ".prettierrc",
+    ".gitignore"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvramesh/turbowarp-packager-cli.git"
+  },
+  "author": "Ramesh Vijayaraghavan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rvramesh/turbowarp-packager-cli/issues"
+  },
+  "homepage": "https://github.com/rvramesh/turbowarp-packager-cli#readme",
+  "dependencies": {
+    "@turbowarp/packager": "1.6.1",
+    "adm-zip": "^0.5.10",
+    "commander": "^10.0.0"
+  }
+}
