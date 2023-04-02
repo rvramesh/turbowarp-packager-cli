@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 const fs = require("fs")
 const path = require("path")
 const AdmZip = require("adm-zip")
@@ -52,9 +53,8 @@ const run = async (inputPath, outputPath, settings) => {
   }
   const extension = result.type === "text/html" ? ".html" : ".zip"
   const outputDir = path.join("./", outputPath)
-
   if (!fs.existsSync(outputDir)) {
-    fs.promises.mkdir(outputDir, { recursive: true })
+    await fs.promises.mkdir(outputDir, { recursive: true })
   }
   const file = path.join(outputDir, "demo_output" + extension)
   await fs.promises.writeFile(file, data)
@@ -65,7 +65,8 @@ const run = async (inputPath, outputPath, settings) => {
   }
 }
 
-run(args.input, args.output, settings).catch((err) => {
-  console.error(err)
-  process.exit(1)
-})
+;(async () =>
+  run(args.input, args.output, settings).catch((err) => {
+    console.error(err)
+    process.exit(1)
+  }))()
